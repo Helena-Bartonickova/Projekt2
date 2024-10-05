@@ -24,7 +24,7 @@ const countries = [
 ];
 
 function checkCountry(country, countries){
-    if  (country typeof == (!string) || country.lenght==0) 
-    
-  console.log('Zadali jste neplatný dotaz: ${country}')
-  }
+    if  (typeof country != "string" || country.lenght==0) 
+     
+  console.log('Zadali jste neplatný dotaz {$country}')
+ }
