@@ -1,4 +1,4 @@
-let country = prompt('Zadejte název krajiny: ');
+let country = (prompt('Zadejte název krajiny: '));
 
 const countries = [
   "United States",
@@ -24,7 +24,7 @@ const countries = [
 ];
 
 function checkCountry(country, countries){
-    if  (typeof country != "string" || country.lenght==0) 
+    if  (typeof country != "string" || country.length == 0) {
      
-  console.log('Zadali jste neplatný dotaz {$country}')
- }
+  console.log('Zadali jste neplatný dotaz ${country}')
+ }}
