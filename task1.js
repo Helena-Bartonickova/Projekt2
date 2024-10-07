@@ -1,5 +1,3 @@
-let country = prompt('Zadejte název krajiny: ');
-
 const countries = [
   "United States",
   "China",
