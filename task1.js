@@ -23,9 +23,13 @@ const countries = [
 
 function checkCountry(country, countries){
     if (typeof country !== "string" || country.length === 0) {
-    
-  console.log(`Zadali jste neplatný dotaz ${country}`);
+      console.log(`Zadali jste neplatný dotaz ${country}`);
 
   return country;
   }
-}
+    if (countries.includes(country) && countries.indexOf(country)) {
+        console.log(`Zadaná krajina ${country} se nachází v seznamu krajin na indexe ${i}`)
+  } else {
+        console.log(`Zadaná krajina ${country} se nenachází v seznamu krajin`)
+    }
+  }
