@@ -27,9 +27,12 @@ function checkCountry(country, countries){
 
   return country;
   }
-    if (countries.includes(country) && countries.indexOf(country)) {
+    
+    if (countries.includes(country); const i = countries.indexOf(country) ) {
         console.log(`Zadaná krajina ${country} se nachází v seznamu krajin na indexe ${i}`)
   } else {
         console.log(`Zadaná krajina ${country} se nenachází v seznamu krajin`)
     }
   }
+
+  checkCountry("Turkey", countries);
