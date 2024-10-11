@@ -29,7 +29,7 @@ function checkCountry(country, countries){
     }
   const i = countries.indexOf(country);
     if (i !== -1) {
-        console.log(`Zadaná krajina ${country} se nachází v seznamu krajin na indexe ${i}`)
+        console.log(`Zadaná krajina ${country} se nachází v seznamu krajin na indexu ${i}`)
   } else {
         console.log(`Zadaná krajina ${country} se nenachází v seznamu krajin`)
     }
@@ -37,7 +37,7 @@ function checkCountry(country, countries){
 
 
 //2. část
-const arrayLength = countries.length
+const arrayLength = countries.length; 
 
 function addCountry(country, countries){
     if (typeof country !== "string" || country.length === 0) {
@@ -45,11 +45,12 @@ function addCountry(country, countries){
     return country;
     }
   const i = countries.indexOf(country);
-    if (i !== -1) {
-      console.log(`Zadaná krajina ${country} se nachází v seznamu krajin na indexe ${i}`);
-  } else {(countries.push (country)) 
+  countries.push(country);  
+  if (i === -1) {
       console.log(`Zadaná krajina ${country} byla úspěšně přidána do seznamu krajin na indexu ${i}. Celkový počet krajin v seznamu je ${arrayLength}.`);
+  } else {
+      console.log(`Zadaná krajina ${country} se nachází v seznamu krajin na indexu ${i}`);
     }
   }
 
-  addCountry("Czech", countries)
+  addCountry("Finland", countries)
