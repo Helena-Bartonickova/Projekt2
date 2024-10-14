@@ -1,4 +1,5 @@
 //1. část
+
 const countries = [
   "United States",
   "China",
@@ -35,6 +36,9 @@ function checkCountry(country, countries){
     }
   }
 
+
+// 2. část
+
 function addCountry(country, countries){
     if (typeof country !== "string" || country.length === 0) {
       console.log(`Zadali jste neplatný dotaz ${country}`);
@@ -50,4 +54,23 @@ function addCountry(country, countries){
     }
   }
 
-  addCountry("Finland", countries)
+
+// 3. část
+
+function removeCountry(country, countries){
+    if (typeof country !== "string" || country.length === 0) {
+      console.log(`Zadali jste neplatný dotaz ${country}`);
+    return country;
+    }
+      const i = countries.indexOf(country);
+    if (i !== -1) {
+      countries.splice(country); 
+      console.log(`Zadaná krajina ${country} byla odstraněna ze seznamu krajin na indexu ${i}. Aktuální počet krajin v seznamu je ${countries.length}.`)
+  } else {
+      console.log(`Zadaná krajina ${country} se nenachází v seznamu krajin`)
+    }
+}
+
+
+removeCountry("Japan", countries);
+
