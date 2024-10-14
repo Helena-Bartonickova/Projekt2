@@ -62,11 +62,10 @@ function removeCountry(country, countries){
       console.log(`Zadali jste neplatný dotaz ${country}`);
     return country;
     }
-      const nCountries = countries.length -1;
       const i = countries.indexOf(country);
     if (i !== -1) {
-      countries.splice(country);
-      console.log(`Zadaná krajina ${country} byla odstraněna ze seznamu krajin na indexu ${i}. Aktuální počet krajin v seznamu je ${nCountries}.`)
+      countries.splice(i, 1);
+      console.log(`Zadaná krajina ${country} byla odstraněna ze seznamu krajin na indexu ${i}. Aktuální počet krajin v seznamu je ${countries.length}.`)
   } else {
       console.log(`Zadaná krajina ${country} se nenachází v seznamu krajin`)
     }
