@@ -39,6 +39,7 @@ const copyCountries = [
     { country: "Turkey", population: 84339642 },
 ];
 
-const orderCountries = copyCountries.slice() && population.sort();
+const orderCountries = copyCountries.slice().sort((a, b) => a.population - b.population);
 
 console.log(orderCountries)
+
