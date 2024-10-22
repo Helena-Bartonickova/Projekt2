@@ -43,3 +43,11 @@ const orderCountries = copyCountries.slice().sort((a, b) => a.population - b.pop
 
 console.log(orderCountries)
 
+
+
+
+const addId = copyCountries.map(function())
+
+
+console.log(addId)
+
