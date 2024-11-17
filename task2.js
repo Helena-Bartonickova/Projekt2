@@ -41,18 +41,20 @@ const copyCountries = [
 
 const orderCountries = copyCountries.slice().sort((a, b) => a.population - b.population);
 
-console.log(orderCountries)
+console.log(orderCountries);
 
 
 
 
-const addId = orderCountries.map((country, index) => {
+
+const addIdAndPercentage = orderCountries.map((country, index) => {
     return {
         ...country,
-        id: country.country.slice(0,3) + index
+        id: country.country.slice(0,3) + index,
+        populationPercentage: ((country.population / populationTotal) *100).toFixed(2)
     };
 });
 
 
-console.log(addId);
+console.log(addIdAndPercentage);
 
