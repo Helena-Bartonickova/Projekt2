@@ -46,9 +46,11 @@ console.log(orderCountries)
 
 
 
-const addId = copyCountries.map(country, index){
-    id = country.slice(0,3) + index
-}
+const addId = copyCountries.map(country, index) => {
+    return {
+        ...country
+        id: country.country.slice(0,3) + index
+}}
 
 
 console.log(addId)
